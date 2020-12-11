@@ -1,0 +1,21 @@
+<!-- Page 1: Question 7 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random msg generator</title>
+        
+    </head>
+    <body>
+        <div id="message" style="text-align: center; font-size: 40px;"></div>
+
+        <script type="text/JavaScript">
+            var messages=[
+                "Have a GOOD day",
+                "Have a BAD day"
+            ];
+
+            document.getElementById("message").innerHTML=messages[Math.floor(Math.random() * messages.length)];
+        </script>
+    </body>
+</html>

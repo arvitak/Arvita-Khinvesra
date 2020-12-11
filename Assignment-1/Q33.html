@@ -1,0 +1,22 @@
+<!-- page 4: Question 15-->
+<!DOCTYPE html>
+<html>
+    <head><title>Cumulative sum of list</title></head>
+    <body>
+        <div>
+            Enter comma-separated numbers: <input type="text" id="input"> <br> <br>
+            <button onclick=" Sum(); return false;">Find Cumulative sum</button>
+        </div>
+        <br>
+        <div id="result"></div>
+        <script>
+            function Sum()
+            {
+                var arr= document.getElementById("input").value.split(',');
+                arr=arr.map(Number);
+                const cumulativeSum = (sum => value => sum += value)(0);
+                document.getElementById("result").innerHTML=(arr.map(cumulativeSum));
+            }
+        </script>
+    </body>
+</html>

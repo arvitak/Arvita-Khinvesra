@@ -1,0 +1,58 @@
+<!-- Page 9: q6 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Morse~text</title>
+        <style>
+            p{
+                font-size: larger;
+                color: rgb(14, 85, 85);
+            }
+        </style>
+    </head>
+    <body style="text-align: center;">
+        <div>
+            <form id="encode">
+                Enter plaintext <br> <input type="text" id="inputText">
+                <br> <br>
+                <button onclick="encodeMe(); return false;">ENCODE</button>
+                <p id="eresult"></p>
+            </form>
+            <form id="decode">
+                Enter Morse code <br> <input type="text" id="morseText">
+                <br> <br>
+                <button onclick="decodeMe(); return false;">DECODE</button>
+                <p id="dresult"></p>
+            </form>
+        </div>
+
+
+        <script>
+            var letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"," ","\n"];
+            var symbols=[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--..","-----",".----","..---","...--","....-",".....","-....","--...","---..","----.","^","\n"];            
+            function encodeMe()
+            {
+                var text= document.getElementById("inputText").value.trim().toUpperCase().split("");
+                coded="";
+                for(var character in text)
+                {
+                    coded+=symbols[letters.indexOf(text[character])]+ " ";
+                }
+                document.getElementById("eresult").innerHTML= "Morse code:  "+coded;
+
+            }
+
+            function decodeMe()
+            {
+                var text= document.getElementById("morseText").value.trim().replace(/_|¯|—|–/g,"-").split(" ");
+                decoded="";
+                for(var character in text)
+                {
+                    decoded+= letters[symbols.indexOf(text[character])];
+                }
+                document.getElementById("dresult").innerHTML= "Plain text:  "+decoded;
+            }
+        </script>
+    </body>
+</html>

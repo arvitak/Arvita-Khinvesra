@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Json parse</title></head>
+    <body>
+        <div style="font-size: 30px;">
+            Look at the console please!
+        </div>
+
+        <script> 
+            var string = '{ "name":"bob", "age": 33}';
+            console.log( "Input String:  " +string);
+            
+            var obj= JSON.parse( string);
+            console.log("new object created");
+            console.log("Name:"+obj.name);
+            console.log("age:" +obj.age);
+        </script>
+    </body>
+</html>

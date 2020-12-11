@@ -1,0 +1,28 @@
+<!-- Page 2: Question 3 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String to number</title>
+    </head>
+    <body >
+        <div style="text-align: center; font-size: 30px;">
+            Look at the console, please!
+        </div>
+        
+
+        <script>
+            var nums= function numberArray(strings)
+            {
+                var result = [];
+                strings.forEach(element => {
+                    result.push(Number(element));
+                });
+                return result;
+            }
+
+            console.log(nums(["1.1","2.3"]));
+        </script>
+
+    </body>
+</html>

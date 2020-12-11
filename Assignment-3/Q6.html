@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head><title>eval</title></head>
+    <body>
+        <div style="font-size: 30px;">
+            Look At the console please!
+        </div>
+
+
+        <script>
+            var string="name:'bob',age:33";
+            console.log("Input string: "+string);
+
+            var obj= eval('({' + string + '})');
+            console.log(obj);
+
+            console.log("name:"+obj.name);
+            console.log("age: "+obj.age);
+        </script>
+    </body>
+</html>

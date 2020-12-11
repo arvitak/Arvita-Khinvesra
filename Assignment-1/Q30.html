@@ -1,0 +1,23 @@
+<!-- Page 4- Question 11-->
+
+<!DOCTYPE html>
+<html>
+    <head><title>Largest element from list</title></head>
+    <body>
+        <div>
+            Enter comma-separated numbers: <input type="text" id="input"> <br> <br>
+            <button onclick="largest(); return false;">Find Largest</button>
+        </div>
+        <br>
+        <div id="result"></div>
+        <script>
+            function largest()
+            {
+                var str= document.getElementById("input").value;
+                var arr=str.split(',');
+                var largest= Math.max(...arr);
+                document.getElementById("result").innerHTML= "Largest element: " +largest;
+            }
+        </script>
+    </body>
+</html>

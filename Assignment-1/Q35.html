@@ -1,0 +1,37 @@
+<!-- Page 5: question 23 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fibonacci series</title>
+        <style>
+            #result{
+                width: 600px;
+                overflow: scroll;
+                word-wrap: break-word;
+                margin: 0 auto;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body style="text-align: center;" >
+        <h1>First 100 Fibonacci Numbers starting with 1</h1>
+        <div id="result" >
+
+        </div>
+
+        <script>
+            function printFibo()
+            {
+                var i;
+                var fib = [1,1];
+                for (i = fib.length; i <100; i++) 
+                {
+                    fib[i] = fib[i - 2] + fib[i - 1];
+                    
+                }
+                document.getElementById("result").innerHTML= fib.join(",");
+            }
+            printFibo();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!-- Page 1: Question 4 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flip coins and find heads</title>
+        <script>
+            function headFraction()
+            {
+                var no = document.getElementById("number").value;
+                var heads=0;
+                for (let i = 0; i< no; i++) {
+                  var toss = Math.floor(Math.random() * 2);
+
+                //Heads=1 and tails=0
+                  if(toss==1){
+                    heads++;
+                  }
+                   
+                }
+
+                //toFixed- fraction to be in 1 decimal value
+                var fraction = (heads/no).toFixed(1);
+                document.getElementById("result").innerHTML="The fraction of heads : " +fraction; 
+            } 
+        </script>
+    </head>
+    <body>
+
+        <h1 style="text-align: center;"> Fraction of heads </h1>
+
+        <form style="text-align: center;"> 
+            <label for="number">Enter how many times to flip the coin:</label>
+            <input type="number"  id="number"> <br><br>
+            <input type="submit" name="submit" value="Count Fractions" onclick="headFraction(); return false;">
+        </form>
+        <p id="result" style="text-align: center;"> </p>
+
+    </body>
+</html>
