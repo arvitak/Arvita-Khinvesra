@@ -1,0 +1,28 @@
+<!-- Page 4: question 3-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Greeting the user</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>Greet only alice and bob</h1>
+        name: <input type="text" id="userName"> <br> <br>
+        <button onclick="greetUser(); return false;">Greet me!</button>
+        <p id="result" style="color: rgb(124, 124, 46); font-size: 20px;"></p>
+
+
+
+        <script>
+            function greetUser()
+            {
+                var name= document.getElementById("userName").value;
+                var temp=name.toLowerCase();
+                if((temp.localeCompare('alice')) == 0 || (temp.localeCompare('bob')) == 0)
+                {
+                    document.getElementById("result").innerHTML="Have a good day "+name+ "!";
+                }
+            }
+        </script>
+    </body>
+</html>

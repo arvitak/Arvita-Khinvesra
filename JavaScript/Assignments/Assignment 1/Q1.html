@@ -1,0 +1,38 @@
+<!--  Page 1: Question 3-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flip coins and find heads</title>
+        <script>
+            function flipCoin()
+            {
+                var no = document.getElementById("number").value;
+                var heads=0;
+                for (let i = 0; i< no; i++) {
+                  var toss = Math.floor(Math.random() * 2);
+
+                //Heads=1 and tails=0
+                  if(toss==1){
+                    heads++;
+                  }
+                   
+                }
+                document.getElementById("result").innerHTML="The no of heads are: " +heads; 
+            }
+            
+        </script>
+    </head>
+    <body>
+
+        <h1 style="text-align: center;">Count no of heads </h1>
+
+        <form style="text-align: center;"> 
+            <label for="number">Enter how many times to flip the coin:</label>
+            <input type="number"  id="number"> <br><br>
+            <input type="submit" name="submit" value="Count Heads" onclick="flipCoin(); return false;">
+        </form>
+        <p id="result" style="text-align: center;"> </p>
+
+    </body>
+</html>

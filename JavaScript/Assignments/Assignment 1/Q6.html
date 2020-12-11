@@ -1,0 +1,28 @@
+<!-- Page 2: Question 5 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array and string methods</title>
+    </head>
+    <body>
+        <div id="result">
+
+        </div>
+
+        <script>
+                var array1 = ["stop","quit","exit"];
+                var total=0;
+                var reg=/^[^qQ]+$/;
+                for(var i=0;i<3;i++)
+                {
+                    if(reg.test(array1[i])==true)
+                    {
+                        total+=array1[i].length;
+                    }
+ 
+                }
+                document.getElementById("result").innerHTML=total;
+        </script>
+    </body>
+</html>

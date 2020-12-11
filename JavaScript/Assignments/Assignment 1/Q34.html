@@ -1,0 +1,26 @@
+<!-- page 4: Question 16-->
+<!DOCTYPE html>
+<html>
+    <head><title>String palindrome</title></head>
+    <body>
+        <h1>Check if string is palindrome</h1>
+        <div id="input">
+            enter a string: <input type="text" id="str"> <br> <br>
+            <button onclick="isPalin(); return false;">FIND</button>
+        </div>
+        <br>
+        <div id="result"></div>
+
+        <script>
+            function isPalin()
+            {
+                var inputString= document.getElementById("str").value;
+                var rev=inputString.split("").reverse().join("");
+                if(inputString == rev)
+                    document.getElementById("result").innerHTML="String is palindrome.";
+                else
+                    document.getElementById("result").innerHTML="String is not palindrome.";
+            }
+        </script>
+    </body>
+</html>

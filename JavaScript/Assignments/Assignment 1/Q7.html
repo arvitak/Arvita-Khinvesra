@@ -1,0 +1,29 @@
+<!-- Page 3: Question 5 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>eval example</title>
+    </head>
+    <body>
+        <div>
+            function seven() { <br>
+                x = 7; <br>
+                return(x); <br>
+                } <br>
+        </div>
+    
+        <div id="result"></div>
+
+
+
+        <script>
+            function seven() {
+                x = 7;
+                return(x);
+            }
+
+            //eval(x) gives output 7 because x becomes a global variable since it is not defined with a 'var' keyword
+            document.getElementById("result").innerHTML = "<br><br> Result of calling seven() :" +seven() + "<br><br> Calling eval :" +eval(x);
+        </script>
+    </body>
+</html>

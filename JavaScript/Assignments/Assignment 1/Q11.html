@@ -1,0 +1,34 @@
+<!-- Page 4: Question 5 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sum of multiples of 3 or 5</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>Sum of multiples of 3 or 5</h1>
+        <div class="input">
+            Enter a number: <input type="number" id="input" name="input"> <br> <br>
+            <button onclick="findSum(); return false;"> Find Sum</button>
+        </div>
+        <br> <br>
+        <div id="result"></div>
+
+
+        <script>
+            function findSum()
+            {
+                var number= parseInt(document.getElementById("input").value);
+                var sum=0;
+                for( let i=1; i<=number;i++)
+                {
+                    if( (i % 3==0) || (i % 5==0))
+                    {
+                        sum +=i;
+                    }
+                }
+                document.getElementById("result").innerHTML="Sum : "+sum;
+            }
+        </script>
+    </body>
+</html>

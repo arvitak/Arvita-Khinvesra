@@ -1,0 +1,30 @@
+<!-- Page 2: Question 2 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array of random numbers</title>
+        <style>
+            #result{
+                width: 600px;
+                overflow: scroll;
+                word-wrap: break-word;
+                margin: 0 auto;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body style="text-align: center;">
+        <p>Array of 100 random numbers</p>
+        <div id="result" ></div>
+
+
+        <script>
+            var randomArray= new Array(100);
+
+            randomArray = [...Array(100)].map(() => (Math.random()) );
+            
+            document.getElementById("result").innerHTML= randomArray;
+        </script>
+    </body>
+</html>

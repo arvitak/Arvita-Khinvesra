@@ -1,0 +1,21 @@
+<!-- Page 4: Question 13 -->
+
+<!DOCTYPE html>
+<html>
+    <head><title>array includes element </title></head>
+    <body>
+        <div style="font-size: 30px;">Look at the console!</div>
+        <script>
+            function checkElement( arr,search)
+            {
+                return arr.includes(search);
+            }
+
+            var array=[1,2,5,6,10];
+            var search =6;
+            console.log("Input array: "+array);
+            console.log("Element to find : " +search );
+            console.log("Element found: " +checkElement(array,search));
+        </script>
+    </body>
+</html>
